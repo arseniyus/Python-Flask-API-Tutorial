@@ -31,7 +31,52 @@ P.S. Don't worry about remembering all of that. This is just for your understand
 
 ### What
 
-Ticket 1)
+Ticket 1) The Set up.
+
+Never coded in Python? Don't worry. It is eerily similar to JavaScript.
+
+For example:
+A basic multiplication function in JS would look like:
+
+function multiply(a, b) {
+return = a \* b;
+}
+const result = multiply(2, 4)
+console.log(result);
+
+And in Python:
+def multiply(a, b):
+return a \* b
+
+result = multiply(2, 4)
+print(result)
+
+The difference? Just the syntax (The grammar of a programming language).
+
+Let's look at some key differences:
+
+- No variables (let, const, var)
+  just x = 10 in Python (let x = 10 in JS)
+- Def === function
+- No curlies ( {} )
+  instead Python uses indentation to scope out blocks (multiple lines) of code.
+  e.g.
+  A lot of indentantion
+  without approprate indentation
+  the code
+  won't work.
+- : (colons) instead of ; (semi-colons)
+  and unlike JS it is needed to make the function run. Though statements end on new line.
+- python_likes_snake_case as oposed to camelCase in Js.
+  Ssssssssssssss
+  remember_alwasy_use_underscores_and_lowercase
+
+A lot of the JS methods (a pre-defined mini function within a programing language e.g. toString(), .length, toUpperCase, console.log()) - with which you may already be familiar with also exist in some capacity in Python.
+E.g. All of the above exist. It might be worded differently like print === console.log.
+But that is where google and documentation is helpful.
+
+Here is some Python documentation to get you started:
+https://pythonbasics.org/
 
 - Install Flask and set up a virtual environment for your project.
 - Create a file app.py.

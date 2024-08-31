@@ -82,6 +82,16 @@ https://pythonbasics.org/
 - Create a file app.py.
 
 Ticket 2)
+a) Install Python.
+- In VSC click on 'extensions', search for 'Python', and click 'Install' 
+-  Create a file called app.py
+- Type 'PIP install' in the terminal hit enter. 
+- The terminal will prompt you to create a virtual environment.
+- (Optional alternative) Go to https://www.python.org/downloads/
+- On Install make sure you check both:
+    'Use admin privileges when installing py.exe' AND
+    'Add python.exe to PATH'
+This will save you a lot of time in the future when ausing any command prompt or terminal without needing to specify the full path.
 
 - write some code to define your API endpoints and logic.
 

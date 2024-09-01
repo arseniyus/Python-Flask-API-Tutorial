@@ -81,19 +81,65 @@ https://pythonbasics.org/
 - Install Flask and set up a virtual environment for your project.
 - Create a file app.py.
 
-Ticket 2)
-a) Install Python.
-- In VSC click on 'extensions', search for 'Python', and click 'Install' 
--  Create a file called app.py
-- Type 'PIP install' in the terminal hit enter. 
-- The terminal will prompt you to create a virtual environment.
-- (Optional alternative) Go to https://www.python.org/downloads/
-- On Install make sure you check both:
-    'Use admin privileges when installing py.exe' AND
-    'Add python.exe to PATH'
-This will save you a lot of time in the future when ausing any command prompt or terminal without needing to specify the full path.
+### Ticket 1) ### The Set Up
 
-- write some code to define your API endpoints and logic.
+a) Install Python.
+
+- Option 1) Go to 'microsoft store' search for Python install any 3x version. The latest stable version is 3.12.5 (I use 3.13)
+- Option 2) Go to https://www.python.org/downloads/ - Install Python on your system
+- On Install make sure you check both:
+  'Use admin privileges when installing py.exe' AND
+  'Add python.exe to PATH'
+
+  Why?
+  This will save you a lot of time in the future when ausing any command prompt or terminal without needing to specify the full path.
+
+- Then, in VSC click on 'extensions', search for 'Python', and click 'Install'
+
+- To verify that python installed successfully type in 'python --version' in the terminal.
+
+- For any issues: go to: https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites and troubleshoot.
+
+b) Create a virtual environment
+This is a comon best practice amongst Python devs. It keeps the packages you install here isolated from all of your other environments, and therefore porjects, just in case things go wrong.
+
+- Press 'Ctrl+Shift+p'
+- Type: 'Python: Create Environment'
+- Select 'Venv'
+- Select the version of Python you just installed
+- It will then install and a .venv folder will appear at the root of your directory.
+
+c) Create a gitignore file
+
+- Just type when creating a file '.gitignore'
+- In the git ignore file type in 'venv/'
+  This will make sure your venv file doesn't get pushed into the repository when you git add.
+
+d) Create a file called app.py
+
+e) Check the file is working.
+
+- In your file write a simple message along the lines of:
+  msg = "Hello World!"
+  print(msg)
+- Run it by either:
+  1. in the terminal type in 'python app.py' or
+  2. By pressing the little 'run' button in the top right of the file (looks like a play button)
+  3. Or right click on your code and press 'Run Python'
+
+Expected outcome: your printed message should appear.
+
+- Type 'PIP install' in the terminal hit enter.
+- The terminal will prompt you to create a virtual environment.
+
+f) Install Packages.
+We need to Install 2 things:
+
+- Flask by typing: 'pip install Flask'
+- Flask-RESTful: 'pip install Flask-RESTful'
+
+Ticket 2)
+Write some code to define your API endpoints and logic.
 
 Ticket 3) Run the server and make the first API call using a tool like Postman or curl.
 

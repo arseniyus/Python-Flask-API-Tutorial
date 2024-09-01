@@ -5,10 +5,19 @@ app = Flask(__name__)
 api = Api(app)
 # We are wrapping our App in an API, initialises resful API
 
+class HelloWorld(Resource):
+    def get(self):
+        return {"message":"Hello World"}
+    
+# The response need to be in a valid JSON format
+# This creates a dictionary with a key "message" and a value "Hello World". 
+    
+api.add_resource(HelloWorld, "/")
+    # or /helloworld 
+        
 if __name__ == "__main__":
     app.run(debug=True)
 # starts our server and our flask appliciation
 # debug starts it in debug mode, allos us to see logs and what is wrong
 
-msg = "Hello World!"
-print(msg)
+

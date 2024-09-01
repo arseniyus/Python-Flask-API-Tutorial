@@ -4,7 +4,7 @@ Hi! Welcome to my Python Flask API Tutorial Workshop
 
 ### Why
 
-- Why Python?
+- Why Python? 🐍
 
 Python is a very popular and common programming language. It is on par in popularity with JavaScript.
 Python is used in everything from web/software development, automation, machine learning, data analysis and data visualisation.
@@ -13,7 +13,7 @@ Why not just stick with JavaScript, it does a lot of that just as well?
 It is good to be tech agnostic. It encourages flexibility of thinking, confidence, and fosters problem-solving.
 Also, broadening your toolset as a bootcamper increases your chances of being hired. The more you learn the more you earn!
 
-- Why Flask?
+- Why Flask? 🧪
   Flask is a Python web framework that allows yout to buiuld lightweight (loads quickly) web apps very quickly and easily.
 
 * It is known as a microframework, as it keeps the crux of the app simple and scaleable.
@@ -27,11 +27,9 @@ Also, broadening your toolset as a bootcamper increases your chances of being hi
 P.S. Don't worry about remembering all of that. This is just for your understanding and awareness.
 
 - Easy to use. Flask has a very small learning curve. Perfect for beginners.
-- Local Development: you can "local host" with it. :)
+- Local Development: you can "local host" with it. 😁
 
-### What
-
-Ticket 1) The Set up.
+### Core Concepts ###
 
 Never coded in Python? Don't worry. It is eerily similar to JavaScript.
 
@@ -68,7 +66,7 @@ Let's look at some key differences:
 - : (colons) instead of ; (semi-colons)
   and unlike JS it is needed to make the function run. Though statements end on new line.
 - python_likes_snake_case as oposed to camelCase in Js.
-  Ssssssssssssss
+  Ssssssssssssss 🐍
   remember_alwasy_use_underscores_and_lowercase
 
 A lot of the JS methods (a pre-defined mini function within a programing language e.g. toString(), .length, toUpperCase, console.log()) - with which you may already be familiar with also exist in some capacity in Python.
@@ -81,7 +79,7 @@ https://pythonbasics.org/
 - Install Flask and set up a virtual environment for your project.
 - Create a file app.py.
 
-### Ticket 1) ### The Set Up
+### Ticket 1) The Set Up
 
 a) Install Python.
 
@@ -145,6 +143,9 @@ We need to Install 2 things:
 
 Ticket 2)
 Write some code to define your API endpoints and logic.
+
+a) Hello World.
+You got the 
 
 Ticket 3) Run the server and make the first API call using a tool like Postman or curl.
 

@@ -115,6 +115,11 @@ c) Create a gitignore file
 - In the git ignore file type in 'venv/'
   This will make sure your venv file doesn't get pushed into the repository when you git add.
 
+IF upon git adding, git still tracks the .venv folder, don't worry. Just type this in the terminal:
+'git rm -r --cached .venv/'
+
+This will remove the changes from the commit.
+
 d) Create a file called app.py
 
 e) Check the file is working.

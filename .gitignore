@@ -123,6 +123,7 @@ dist
 .vscode-test
 
 # venv
+.venv/ 
 venv/
 my_env
 tmp_env

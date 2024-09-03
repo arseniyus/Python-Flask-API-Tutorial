@@ -36,25 +36,25 @@ Never coded in Python? Don't worry. It is eerily similar to JavaScript.
 For example:
 A basic multiplication function in JS would look like:
 
-function multiply(a, b) {
-return = a \* b;
+``function multiply(a, b)`` {
+``return = a \* b;``
 }
-const result = multiply(2, 4)
-console.log(result);
+``const result = multiply(2, 4)``
+``console.log(result);``
 
 And in Python:
-def multiply(a, b):
-return a \* b
+``def multiply(a, b):``
+``return a \* b``
 
-result = multiply(2, 4)
-print(result)
+``result = multiply(2, 4)``
+``print(result)``
 
 The difference? Just the syntax (The grammar of a programming language).
 
 Let's look at some key differences:
 
 - No variables (let, const, var)
-  just x = 10 in Python (let x = 10 in JS)
+  just ``x = 10`` in Python (``let x = 10 in JS``)
 - Def === function
 - No curlies ( {} )
   instead Python uses indentation to scope out blocks (multiple lines) of code.
@@ -69,7 +69,7 @@ Let's look at some key differences:
   Ssssssssssssss 🐍
   remember_alwasy_use_underscores_and_lowercase
 
-A lot of the JS methods (a pre-defined mini function within a programing language e.g. toString(), .length, toUpperCase, console.log()) - with which you may already be familiar with also exist in some capacity in Python.
+A lot of the JS methods (a pre-defined mini function within a programing language e.g. ``toString(), .length, toUpperCase, console.log())`` - with which you may already be familiar with also exist in some capacity in Python.
 E.g. All of the above exist. It might be worded differently like print === console.log.
 But that is where google and documentation is helpful.
 
@@ -94,14 +94,14 @@ a) Install Python.
 
 - Then, in VSC click on 'extensions', search for 'Python', and click 'Install'
 
-- To verify that python installed successfully type in 'python --version' in the terminal.
+- To verify that python installed successfully type in `'python --version'` in the terminal.
 
 - For any issues: go to: https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites and troubleshoot.
 
 b) Create a virtual environment
 This is a comon best practice amongst Python devs. It keeps the packages you install here isolated from all of your other environments, and therefore porjects, just in case things go wrong.
 
-- Press 'Ctrl+Shift+p'
+- Press `'Ctrl+Shift+p'`
 - Type: 'Python: Create Environment'
 - Select 'Venv'
 - Select the version of Python you just installed
@@ -114,38 +114,51 @@ c) Create a gitignore file
   This will make sure your venv file doesn't get pushed into the repository when you git add.
 
 IF upon git adding, git still tracks the .venv folder, don't worry. Just type this in the terminal:
-'git rm -r --cached .venv/'
+`'git rm -r --cached .venv/'`
 
 This will remove the changes from the commit.
 
 d) Create a file called app.py
 
-e) Check the file is working.
-
-- In your file write a simple message along the lines of:
-  msg = "Hello World!"
-  print(msg)
-- Run it by either:
-  1. in the terminal type in 'python app.py' or
-  2. By pressing the little 'run' button in the top right of the file (looks like a play button)
-  3. Or right click on your code and press 'Run Python'
-
-Expected outcome: your printed message should appear.
-
-- Type 'PIP install' in the terminal hit enter.
-- The terminal will prompt you to create a virtual environment.
-
-f) Install Packages.
-We need to Install 2 things:
+e) Install Packages.
+We need to Install 3 things:
 
 - Flask by typing: 'pip install Flask'
-- Flask-RESTful: 'pip install Flask-RESTful'
+- request: 'pip install request'
+- jsonify: 'pip install jsonify'
 
-Ticket 2)
+### Ticket 2) Is this thing on?
 Write some code to define your API endpoints and logic. 
 
-a) Hello World.
-You got the 
+- In your file write a simple message along the lines of:
+  "Hello World!"
+
+`@app.route("/", methods=["GET"])`
+`def test():`
+    `if request.method == "GET":`
+        `return jsonify({"response": "Hello There!"})`
+
+Does this look familiar? 
+It should! 😄
+
+This is the twin brother
+`app.get('/', (req, res) => {`
+    `res.json({ response: "Hello There!" });`
+`})`
+
+Let's do a quick breakdown of the syntax of the original Python function:
+  - app.with_this_route("any string", methods=["GET request])
+  - def test(): (A function with any name)
+      if we are making a GET request:
+        return a json object({"key": "value"})
+
+Normally in JavaScript you will need to define the logic of the get request funcition in a seperate place. 
+But Python let's you define both the endpoint and the logic all in one place! Neat right? 😍
+        
+- Test it by typing 'python app.py' in the terminal
+
+Expected outcome: your custom message should appear in local host, upon clicking on the hyperlink in the terminal. 
+
 
 Ticket 3) Run the server and make the first API call using a tool like Postman or curl. 
 

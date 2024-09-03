@@ -20,7 +20,7 @@ def test():
 def get_games():
     return jsonify(Games) 
 
-# GET request to retrieve a gamy by it's positon
+# GET request to retrieve a game by it's positon
 @app.route("/games/<int:position>", methods=["GET"])
 def get_game(position):
     game = next((game for game in Games if game["position"] == position), None)
@@ -30,7 +30,7 @@ def get_game(position):
         return jsonify({"message": "Game not found"}), 404       
 
 # POST request to add a new game
-@app.route("/ga,es", methods=['POST'])
+@app.route("/games", methods=['POST'])
 def add_game():
     new_game = request.get_json()
     Games.append(new_game)
@@ -46,7 +46,27 @@ def delete_game(position):
     else:
         return jsonify({"message": "Game not found"}), 404  
     
-
+# PUT request to ammend an entire game
+@app.route("/games/<int:position>", methods={"PUT"})
+def replace_game(position):
+    game = next((game for game in Games if game ["position"] == position), None)
+    if game:
+        updated_game = request.get_json()
+        game.update(updated_game)
+        return jsonify({"message": "Game successfully updated"}), 201
+    else: 
+        return jsonify({"message": "Game not found"}), 404
+    
+# PATCH request to partialy ammend a game
+@app.route("/games/<int:position>", methods={"PATCH"})
+def update_game(position):
+    game = next((game for game in Games if game ["position"] == position), None)
+    if game:
+        updated_data = request.get_json()
+        game.update(updated_data)
+        return jsonify({"message": "Game successfully updated"}), 200
+    else: 
+        return jsonify({"message": "Game not found"}), 404
     
 # The response need to be in a valid JSON format
 # This creates a dictionary with a key "message" and a value "Hello World". 

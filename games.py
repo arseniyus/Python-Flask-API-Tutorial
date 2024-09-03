@@ -23,9 +23,7 @@ Games = [
       "release date": "20 October 2022",
       "Genre": "Action Roguelike, Bullet Hell"
      },
-        
-        asdas 
-        
+              
         {"position": 4,
       "name": "Portal",
       "Average review sore": "98%",

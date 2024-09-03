@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
-from flask_restful import Api, Resource 
+from flask_restful import Api, Resource
+from games import Games 
 
 app = Flask(__name__)
 # api = Api(app)
@@ -13,6 +14,39 @@ app = Flask(__name__)
 def test():
     if request.method == "GET":
         return jsonify({"response": "Hello There!"})
+    
+# GET request to retrieve all games 
+@app.route("/games", methods=["GET"])
+def get_games():
+    return jsonify(Games) 
+
+# GET request to retrieve a gamy by it's positon
+@app.route("/games/<int:position>", methods=["GET"])
+def get_game(position):
+    game = next((game for game in Games if game["position"] == position), None)
+    if game:
+        return jsonify(game, {"message": "Game retrieved successfully"}), 200
+    else:
+        return jsonify({"message": "Game not found"}), 404       
+
+# POST request to add a new game
+@app.route("/ga,es", methods=['POST'])
+def add_game():
+    new_game = request.get_json()
+    Games.append(new_game)
+    return jsonify(new_game), 201
+
+# DELETE request to delete a game by position
+@app.route("/games/<int:position>", methods={"DELETE"})
+def delete_game(position):
+    game = next((game for game in Games if game["position"] == position), None)
+    if game:
+        Games.remove(game)
+        return jsonify({"message": "Game successfully deleted"}), 200
+    else:
+        return jsonify({"message": "Game not found"}), 404  
+    
+
     
 # The response need to be in a valid JSON format
 # This creates a dictionary with a key "message" and a value "Hello World". 

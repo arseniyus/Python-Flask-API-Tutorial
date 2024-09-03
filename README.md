@@ -142,13 +142,13 @@ We need to Install 2 things:
 - Flask-RESTful: 'pip install Flask-RESTful'
 
 Ticket 2)
-Write some code to define your API endpoints and logic.
+Write some code to define your API endpoints and logic. 
 
 a) Hello World.
 You got the 
 
-Ticket 3) Run the server and make the first API call using a tool like Postman or curl.
+Ticket 3) Run the server and make the first API call using a tool like Postman or curl. 
 
 Ticket 4) Implement different HTTP methods like GET, POST, PUT, and DELETE for your API.
 
-Ticket 5) Create a class to represent your data model and set up a SQLite database connection.
+Ticket 5) Create a class to represent your data model and set up a SQLite database connection. (Optional) 

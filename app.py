@@ -13,7 +13,6 @@ app = Flask(__name__)
 def test():
     if request.method == "GET":
         return jsonify({"response": "Hello There!"})
-        print(response)
     
 # GET request to retrieve all games 
 @app.route("/games", methods=["GET"])

@@ -29,32 +29,32 @@ P.S. Don't worry about remembering all of that. This is just for your understand
 - Easy to use. Flask has a very small learning curve. Perfect for beginners.
 - Local Development: you can "local host" with it. 😁
 
-### Core Concepts ###
+### Core Concepts
 
 Never coded in Python? Don't worry. It is eerily similar to JavaScript.
 
 For example:
 A basic multiplication function in JS would look like:
 
-``function multiply(a, b)`` {
-``return = a \* b;``
+`function multiply(a, b)` {
+`return = a \* b;`
 }
-``const result = multiply(2, 4)``
-``console.log(result);``
+`const result = multiply(2, 4)`
+`console.log(result);`
 
 And in Python:
-``def multiply(a, b):``
-``return a \* b``
+`def multiply(a, b):`
+`return a \* b`
 
-``result = multiply(2, 4)``
-``print(result)``
+`result = multiply(2, 4)`
+`print(result)`
 
 The difference? Just the syntax (The grammar of a programming language).
 
 Let's look at some key differences:
 
 - No variables (let, const, var)
-  just ``x = 10`` in Python (``let x = 10 in JS``)
+  just `x = 10` in Python (`let x = 10 in JS`)
 - Def === function
 - No curlies ( {} )
   instead Python uses indentation to scope out blocks (multiple lines) of code.
@@ -69,7 +69,7 @@ Let's look at some key differences:
   Ssssssssssssss 🐍
   remember_alwasy_use_underscores_and_lowercase
 
-A lot of the JS methods (a pre-defined mini function within a programing language e.g. ``toString(), .length, toUpperCase, console.log())`` - with which you may already be familiar with also exist in some capacity in Python.
+A lot of the JS methods (a pre-defined mini function within a programing language e.g. `toString(), .length, toUpperCase, console.log())` - with which you may already be familiar with also exist in some capacity in Python.
 E.g. All of the above exist. It might be worded differently like print === console.log.
 But that is where google and documentation is helpful.
 
@@ -85,12 +85,13 @@ a) Install Python.
 
 - Option 1) Go to 'microsoft store' search for Python install any 3x version. The latest stable version is 3.12.5 (I use 3.13)
 - Option 2) Go to https://www.python.org/downloads/ - Install Python on your system
+
 - On Install make sure you check both:
   'Use admin privileges when installing py.exe' AND
   'Add python.exe to PATH'
 
   Why?
-  This will save you a lot of time in the future when ausing any command prompt or terminal without needing to specify the full path.
+  This will save you a lot of time in the future when using any command prompt or terminal without needing to specify the full path.
 
 - Then, in VSC click on 'extensions', search for 'Python', and click 'Install'
 
@@ -128,40 +129,59 @@ We need to Install 3 things:
 - jsonify: 'pip install jsonify'
 
 ### Ticket 2) Is this thing on?
-Write some code to define your API endpoints and logic. 
+
+Write some code to define your API endpoints and logic.
 
 - In your file write a simple message along the lines of:
   "Hello World!"
 
 `@app.route("/", methods=["GET"])`
 `def test():`
-    `if request.method == "GET":`
-        `return jsonify({"response": "Hello There!"})`
+`if request.method == "GET":`
+`return jsonify({"response": "Hello There!"})`
 
-Does this look familiar? 
+Does this look familiar?
 It should! 😄
 
 This is the twin brother
 `app.get('/', (req, res) => {`
-    `res.json({ response: "Hello There!" });`
+`res.json({ response: "Hello There!" });`
 `})`
 
 Let's do a quick breakdown of the syntax of the original Python function:
-  - app.with_this_route("any string", methods=["GET request])
-  - def test(): (A function with any name)
-      if we are making a GET request:
-        return a json object({"key": "value"})
 
-Normally in JavaScript you will need to define the logic of the get request funcition in a seperate place. 
+- app.with_this_route("any string", methods=["GET request])
+- def test(): (A function with any name)
+  if we are making a GET request:
+  return a json object({"key": "value"})
+
+Normally in JavaScript you will need to define the logic of the get request funcition in a seperate place.
 But Python let's you define both the endpoint and the logic all in one place! Neat right? 😍
-        
+
 - Test it by typing 'python app.py' in the terminal
 
-Expected outcome: your custom message should appear in local host, upon clicking on the hyperlink in the terminal. 
+Expected outcome: your custom message should appear in local host, upon clicking on the hyperlink in the terminal.
 
+### Ticket 3) Complete as many CRUD Operations as you can
 
-Ticket 3) Run the server and make the first API call using a tool like Postman or curl. 
+a) Make a basic GET all resource request
+Let's apply the knowledge gained from the above syntax and apply it.
 
-Ticket 4) Implement different HTTP methods like GET, POST, PUT, and DELETE for your API.
+In the Repository you will note that the GET request has already been completed for you.
+`@app.route("/games", methods=["GET"])`
+`def get_games():`
+`return jsonify(Games)`
 
-Ticket 5) Create a class to represent your data model and set up a SQLite database connection. (Optional) 
+Are you seeig a pattern here?
+
+- Run the server (python app.py) and make the first API call using a tool like Postman.
+
+b) Make a basic POST request
+
+c) Make a basic GET by ID request
+
+d) Make a basic DELETE request
+
+e) Make a basic PUT request
+
+f) Make a basic PATCH request

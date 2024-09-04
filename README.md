@@ -1,4 +1,4 @@
-pipHi! Welcome to my Python Flask API Tutorial Workshop.
+Hi! Welcome to my Python Flask API Tutorial Workshop.
 
 Why
 Why Python? 🐍
@@ -21,22 +21,19 @@ Never coded in Python? Don't worry. It is eerily similar to JavaScript.
 
 For example: A basic multiplication function in JS would look like:
 
-javascript
-Copy code
 function multiply(a, b) {
-  return a * b;
+return a \* b;
 }
 const result = multiply(2, 4);
 console.log(result);
+
 And in Python:
 
-python
-Copy code
 def multiply(a, b):
-    return a * b
-
+return a \* b
 result = multiply(2, 4)
 print(result)
+
 The difference? Just the syntax (the grammar of a programming language).
 
 Let's look at some key differences:
@@ -92,20 +89,17 @@ Ticket 2) Is this thing on?
 Write some code to define your API endpoints and logic.
 
 In your file, write a simple message along the lines of: "Hello World!"
-python
-Copy code
+
 @app.route("/", methods=["GET"])
 def test():
-    if request.method == "GET":
-        return jsonify({"response": "Hello There!"})
-Does this look familiar? It should! 😄
+if request.method == "GET":
+return jsonify({"response": "Hello There!"})
 
+Does this look familiar? It should! 😄
 This is the twin brother:
 
-javascript
-Copy code
 app.get('/', (req, res) => {
-    res.json({ response: "Hello There!" });
+res.json({ response: "Hello There!" });
 })
 Let's do a quick breakdown of the syntax of the original Python function:
 

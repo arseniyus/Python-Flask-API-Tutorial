@@ -2,12 +2,6 @@ from flask import Flask, request, jsonify
 from games import Games 
 
 app = Flask(__name__)
-# api = Api(app)
-# We are wrapping our App in an API, initialises resful API
-
-#class HelloWorld(Resource):
-    #def get(self):
-        #return {"message":"Hello World"}
 
 @app.route("/", methods=["GET"])
 def test():
